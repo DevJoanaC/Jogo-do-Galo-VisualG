@@ -1,28 +1,62 @@
-# Loja Online 🛒
+# Jogo do Galo 🎮
 
-Bem-vindo ao projeto da Loja Online! Este projeto foi desenvolvido para criar um sistema de loja online com funcionalidades essenciais, utilizando Programação Orientada a Objetos (POO) em C#. 
+Bem-vindo ao repositório do Jogo do Galo! Este projeto foi desenvolvido para simular o clássico jogo do Galo, proporcionando uma experiência interativa para dois jogadores competirem entre si.
+
+## Introdução
+
+O desafio deste projeto é criar uma aplicação interativa que permita dois jogadores alternarem suas jogadas num tabuleiro 3x3. Cada jogador é identificado por 'X' ou 'O', e o objetivo é formar uma linha, coluna ou diagonal com suas marcas. O jogo termina quando um jogador vence ou quando todas as células são preenchidas, resultando em empate.
+
+## Fundamentação
+
+O jogo foi implementado utilizando lógica de programação em VisualG. A estrutura básica envolve:
+- Um tabuleiro 3x3 representado por uma matriz.
+- Dois jogadores que se alternam nas jogadas.
+- Verificação de vitória ou empate após cada jogada.
 
 ## Funcionalidades
 
-- **Produtos:** Cada produto possui nome, preço e quantidade em stock.
-- **Clientes:** Os clientes têm nome, endereço e histórico de pedidos.
-- **Carrinhos de Compras:** Permite que os clientes adicionem e removam itens, calculem o total da compra e finalizem o pedido.
-- **Histórico de Pedidos:** Armazena o histórico dos pedidos de cada cliente, permitindo que eles visualizem seus pedidos anteriores.
+- **Jogadores Alternados:** Os jogadores 'X' e 'O' alternam suas jogadas.
+- **Tabuleiro 3x3:** O tabuleiro é uma matriz 3x3 onde os jogadores marcam suas jogadas.
+- **Verificação de Vitória:** O programa verifica se um jogador formou uma linha, coluna ou diagonal após cada jogada.
+- **Empate:** O jogo também verifica se todas as células estão preenchidas, resultando em empate se ninguém venceu.
+- **Interface Interativa:** Desenvolvido em VisualG, permitindo uma experiência interativa e educativa.
 
-## Estrutura do Projeto
+## Como Jogar
 
-O sistema é composto por classes para representar os diferentes componentes:
+1. **Inicie o jogo:** O programa inicializa um tabuleiro vazio e informa que o jogador 'X' começa.
+2. **Jogadas Alternadas:** Os jogadores alternam-se para marcar suas jogadas no tabuleiro.
+3. **Verificação:** Após cada jogada, o programa verifica se houve um vencedor ou se o jogo terminou em empate.
+4. **Resultado:** O jogo exibe uma mensagem informando o vencedor ou se houve empate, e então reinicia para uma nova partida.
 
-1. **Produto:** Armazena informações como nome, preço e quantidade em stock.
-2. **Cliente:** Armazena detalhes como nome, endereço e histórico de pedidos.
-3. **Carrinho de Compras:** Permite a adição e remoção de itens, cálculo do total da compra e finalização do pedido.
+## Exemplo de Código
 
-## Exemplo de Dados de Entrada
+```visualg
+// Inicialização do tabuleiro
+para i de 1 ate 3 faca
+    para j de 1 ate 3 faca
+        tabuleiro[i, j] <- " "
+    fimpara
+fimpara
 
-```csharp
-Produto produto1 = new Produto("camisa", 29.99, 10);
-Produto produto2 = new Produto("calça", 39.99, 10);
-Produto produto3 = new Produto("camisola", 35.00, 10);
-Produto produto4 = new Produto("meias", 3.50, 10);
-Produto produto5 = new Produto("saia", 29.99, 10);
-
+// Loop do jogo
+repita
+    // Exibir tabuleiro
+    ...
+    
+    // Jogada do jogador atual
+    se jogadorAtual = "X" entao
+        // Lógica para jogada do jogador X
+    senao
+        // Lógica para jogada do jogador O
+    fimse
+    
+    // Verificar vitória ou empate
+    ...
+    
+    // Alternar jogador
+    se jogadorAtual = "X" entao
+        jogadorAtual <- "O"
+    senao
+        jogadorAtual <- "X"
+    fimse
+ate que (vencedor ou empate)
