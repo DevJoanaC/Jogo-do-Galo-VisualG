@@ -6,6 +6,8 @@ Bem-vindo ao repositório do Jogo do Galo! Este projeto foi desenvolvido para si
 
 O desafio deste projeto é criar uma aplicação interativa que permita dois jogadores alternarem suas jogadas num tabuleiro 3x3. Cada jogador é identificado por 'X' ou 'O', e o objetivo é formar uma linha, coluna ou diagonal com suas marcas. O jogo termina quando um jogador vence ou quando todas as células são preenchidas, resultando em empate.
 
+O Jogo do Galo é um excelente exercício para praticar conceitos de lógica de programação, estruturas de controlo, e manipulação de eventos de interface. Este projeto não apenas permite aos jogadores desfrutarem de partidas divertidas, mas também serve como uma introdução prática ao desenvolvimento de jogos simples em ambiente computacional.
+
 ## Fundamentação
 
 O jogo foi implementado utilizando lógica de programação em VisualG. A estrutura básica envolve:
